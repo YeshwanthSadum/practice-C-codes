@@ -7,7 +7,7 @@ int main()
 
             char team[] ={'a','b','c','\0'};
 
-            char player_status[3] = "nnn";
+            char player_status[10] = "nnnnnnnnnn"; // 10 players init to 'n'
 
             float amount_spent_by[3];
             int i,j,p=0,n,flag[4];
@@ -33,7 +33,7 @@ int main()
 
             printf("\nTeam %c : Enter a price higher than %f for the player %d else enter 0:",team[i],sp[j],j+1);
             scanf("%f",&bidding_price[i]);
-            if(bidding_price[i]<sp[j])
+            if(bidding_price[i]<=sp[j])
             {
                 flag[i] = 1;
                 bidding_price[i] = 0;
